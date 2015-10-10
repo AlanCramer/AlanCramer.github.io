@@ -97,14 +97,23 @@
             .transition()
             .call(endall, function() {
                 svg.append("text")
-                    .text("Happy 81st Birthday Big Daddy!")
+                    .text("Happy Birthday Big Daddy!")
                     .attr("x", svgWidth/2)
                     .attr("y", svgHeight/2)
                     .style("font-family", "Verdana")
                     .style("font-size", 30)
                     .style("text-anchor", "middle");
+                    
+                svg.append("text")                        
+                    .text("10/10/2015")
+                    .attr("x", svgWidth - 10)
+                    .attr("y", svgHeight - 10 )
+                    .style("font-family", "Verdana")
+                    .style("font-size", 20)
+                    .style("text-anchor", "end");
             })
-            .duration(function(d, i) {  return Math.floor(Math.random() * 10000) + 10000 })
+            .duration(function(d, i) {  return Math.floor(Math.random() * 15000) + 12000 })
+            .ease("quad-in")
             .attr("transform", "translate(0, " + (-svgHeight) + " )")
 
             ;   
